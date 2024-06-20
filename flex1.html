@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+    <head> <title> Responsive</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+    </script>
+        <style>
+            .nav-div {
+                width: 100%;
+                background-color: antiquewhite;
+            }
+
+            .ul-list {
+                list-style: none;
+                display: flex;
+                flex-direction: row; 
+                align-items: center;
+                padding: 0; 
+                justify-content: space-evenly;
+            }    
+
+            .ul-list li {
+                margin: 10px 0; 
+            }
+
+            @media screen and (max-width: 600px) {
+                .ul-list {
+                    flex-direction: column; 
+                    justify-content: space-around;
+                }
+                
+                .ul-list li {
+                    margin: 0 5px; 
+                }
+            }
+
+            @media screen and (max-width: 300px) {
+                .nav-div {
+                    height: 7rem;
+                }
+                
+                .ul-list {
+                    flex-direction: column; 
+                    align-items: stretch;
+                }
+                
+                .ul-list li {
+                    margin: 5px 0; 
+                }
+            }
+
+            .flex-div{
+                display: flex;
+                justify-content: space-evenly;
+            }
+
+            .flex-div div{
+                text-align: center;
+                background-color: antiquewhite;
+                width: 250px;
+                height: 300px;
+                margin: 30px;
+                
+            }
+
+            @media(max-width:600px) {
+            .flex-div {
+                flex-direction: column;
+            }
+        }
+
+        p{
+                border-color: antiquewhite;
+                border-radius: 20px;
+                text-align: center;
+            }
+
+            @media(max-width:600px) {
+            .trow {
+                flex-direction: column;
+                font-size: small;
+            }
+        }
+
+        @media(max-width:600px) {
+            .tb1 {
+                flex-direction: column;
+                font-size: small;
+            }
+        }
+
+        @media(max-width:600px) {
+            .trow1,
+            .p2 {
+                flex-direction: column;
+                font-size: small;
+                text-align-last: auto;
+                margin-left: -85px;
+                text-align:center;
+            }
+        }
+        
+
+        @media(max-width:600px) {
+            p {
+                font-size: small;
+            }
+        }
+
+        .mode {
+            float:right;
+        }
+
+        .change {
+            cursor: pointer;
+            border: 1px solid #555;
+            border-radius: 40%;
+            width: 20px;
+            text-align: center;
+            padding: 5px;
+            margin-left: 8px;
+        }
+
+        .dark{
+            background-color: #222;
+            color: #000000;
+        }
+        .dark .mode{
+            color: white;
+        }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="nav-div">
+            <ul class="ul-list">
+                <li><a href="">Home</a></li>
+                <li><a href="">Product</a></li>
+                <li><a href="">Stories</a></li>
+                <li><a href="">About Us</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+        </div>
+
+        <div class="mode">
+            Dark mode:             
+            <span class="change">OFF</span>
+        </div>
+    
+        <script>
+            $( ".change" ).on("click", function() {
+                if( $( "body" ).hasClass( "dark" )) {
+                    $( "body" ).removeClass( "dark" );
+                    $( ".change" ).text( "OFF" );
+                } else {
+                    $( "body" ).addClass( "dark" );
+                    $( ".change" ).text( "ON" );
+                }
+            });
+        </script>
+
+        <div class="flex-div" style="margin-top: 3%;">
+        <div><img src="nepal.jpg" width="230px" height="250px" style="margin-top: 9px;">Nepal</div>
+        <div><img src="india.jpg" width="230px" height="250px" style="margin-top: 9px;">India</div>
+        <div><img src="china.jpg" width="230px" height="250px" style="margin-top: 9px;">China</div>
+        <div><img src="bhutan.jpg" width="230px" height="250px" style="margin-top: 9px;">Bhutan</div>
+        <div><img src="srilanka.jpg" width="230px" height="250px" style="margin-top: 9px;">Sri-Lanka</div>
+        </div>
+
+        <div style="background-color: antiquewhite">
+            <div style="margin-top: 35px;">
+                <table class="tb1" style="width: 30%; height: 50px;">
+                    <tr class="trow">
+                        <td><b> SHOP </b></td>
+                        <td><b> HELP </b></td>
+                        <td><b> ABOUT </b></td>
+                    </tr>
+                    <tr class="trow">
+                        <td> Drinks </td>
+                        <td> Contact Us </td>
+                        <td> Our Story </td>
+                    </tr>
+                    <tr class="trow">
+                        <td> Gift Cards </td>
+                        <td> FAQ </td>
+                        <td> OLIPOP Digest</td>
+                    </tr>
+                    <tr class="trow">
+                        <td> Store Locator </td>
+                        <td> Accessibility</td>
+                        <td> Ingredients </td>
+                    </tr>
+                    <tr class="trow">
+                        <td> Refer a Friend </td>
+                        <td>  </td>
+                        <td> Digestive Health </td>
+                    </tr>
+                    <tr class="trow">
+                        <td>  </td>
+                        <td>  </td>
+                        <td> Wholesale</td>
+                    </tr>
+                    <tr class="trow">
+                        <td>  </td>
+                        <td>  </td>
+                        <td> Press </td>
+                    </tr>
+                    <tr class="trow">
+                        <td>  </td>
+                        <td>  </td>
+                        <td> Careers </td>
+                    </tr>
+                </table>
+            </div>
+                <p class="p1"  style="text-align: right; margin-top: -161px; margin-right: 16px;"> Sign up to get 10% off your first order</p>
+                
+                <div class="trow1" style=" display:flex; justify-content: space-evenly; margin-left: 78%; margin-top: -20px;" >
+                    <p  class="p2" style="background-color: white; width: 145px;"> Your Email Address </p>
+                    <p  class="p2" style="background-color: goldenrod; width: 141px;" > Subscribe </p>
+                </div>
+
+                <div class="trow"style=" display:flex; justify-content: space-evenly; margin-left: 78%; margin-top: 7px;">
+                <i style="font-size:24px" class="fa">&#xf082;</i>
+                <i style="font-size:24px" class="fa">&#xf099;</i>
+                <i style="font-size:24px" class="fa">&#xf16d;</i>
+                <i style="font-size:24px" class="fa">&#xf08c;</i>
+                </div>   
+                <p style="text-align: left; margin-top: 88px; "> 2022 Olipop,Inc.All Rights Reserved </p> 
+                <div class="trow"  style=" display:flex; justify-content: space-evenly; margin-left: 64%; margin-top: -48px;" >
+                    <p> Terms of Service </p>
+                    <p> Privacy Policy </p>
+                    <p> Do Not Sell My Information </p>
+                </div>
+        </div>
+    </body>
+</html>

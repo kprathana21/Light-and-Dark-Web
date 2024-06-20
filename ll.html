@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+    <head> <title> Light and Dark Mode </title></head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+    <style>
+        body{
+            background-color: black;
+        }
+        .class1{
+            background-color: gold;
+            width: 40%;
+            height: 164px;      
+            margin-left: 29%;
+            margin-top: 15%;  
+            font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;    
+        }
+        
+        .shringaar{
+            margin-top: 5%;
+            text-align: center;
+            padding-left: 13%;
+        }
+
+        .mode{
+            float: right;
+            color: black;
+        }
+        
+        .change{
+            cursor: pointer;
+            text-align: center;
+            color: black;
+            float: right;
+        }
+        .dark{
+            background-color:antiquewhite;
+        }
+        .dark .class1{
+            background-color: chocolate;
+            color: bisque;
+        }
+        .dark .change{
+            color: bisque;
+        }
+        .dark .mode{
+            color: bisque;
+        }
+
+    </style>
+    <body>
+        <div class="class1">
+            <div class="mode">
+                Dark mode:             
+                <span class="change">OFF</span>
+            </div>
+
+            <script>
+                $( ".change" ).on("click", function() {
+                    if( $( "body" ).hasClass( "dark" )) {
+                        $( "body" ).removeClass( "dark" );
+                        $( ".change" ).text( "OFF" );
+                    } else {
+                        $( "body" ).addClass( "dark" );
+                        $( ".change" ).text( "ON" );
+                    }
+                });
+            </script>
+            
+            <div class="shringaar">
+                <p> SHRINGAAR </p>
+            </div>
+    
+            <div style="margin-top: 4%;">
+                <p><i style="text-align: center; margin-left: 17%;"> Shringaar initiates with a toss to laugh and love and to life </i></p>
+            
+                <p style="text-align: center;"> Shringaar is an initiation of 2024 with the goal of letting people
+                    know the importance of relationships and love and bonds.
+                    Through our products, we will to strengthen the bond between
+                    the loved once </p>
+            </div>    
+        </div>
+    </body>
+</html>
